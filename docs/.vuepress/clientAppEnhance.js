@@ -3,13 +3,15 @@ import { addIcons } from "oh-vue-icons"
 import {
   FaFortAwesome,
   FaSatelliteDish,
-  FaTag
+  FaTag,
+  RiArchiveDrawerLine
 } from "oh-vue-icons/icons"
 
 addIcons(
   FaFortAwesome,
   FaTag,
-  FaSatelliteDish
+  FaSatelliteDish,
+  RiArchiveDrawerLine
 )
 
 export default defineClientAppEnhance(({ app, router, siteData }) => { })

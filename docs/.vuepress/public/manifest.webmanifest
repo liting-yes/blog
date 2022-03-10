@@ -1,7 +1,7 @@
 {
-  "name": "Gungnir Theme",
-  "short_name": "Gungnir",
-  "description": "A blog theme for VuePress.",
+  "name": "JiangHuanLH",
+  "short_name": "jhlh",
+  "description": "将焕的个人博客空间",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#2d3746",
