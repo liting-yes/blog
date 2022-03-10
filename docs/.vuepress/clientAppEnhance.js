@@ -1,5 +1,6 @@
 import { defineClientAppEnhance } from '@vuepress/client'
 import { addIcons } from "oh-vue-icons"
+
 import {
   FaFortAwesome,
   FaSatelliteDish,

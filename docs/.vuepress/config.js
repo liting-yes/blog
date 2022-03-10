@@ -61,6 +61,7 @@ module.exports = {
     repo: 'https://gitee.com/jiang-huan-web/blog.git',
     docsDir: 'docs',
     navbar: navbar,
+    sidebar: false,
 
     hitokoto: "https://v1.hitokoto.cn?c=d&c=i",
     
