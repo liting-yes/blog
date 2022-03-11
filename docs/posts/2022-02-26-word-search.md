@@ -1,0 +1,107 @@
+---
+layout: Post
+title: 单词搜索
+subtitle: LeetCode刷题题解记录
+author: 将焕
+date: 2022-03-08
+useHeaderImage: true
+headerImage: /img/in-post/2021-12-24/header.jpg
+tags:
+  - 算法
+  - LeetCode
+  - 中等
+  - DFS
+  - 剪枝
+---
+
+知我者谓我心忧，不知我者谓我何求
+
+<!-- more -->
+
+[题目详情-力扣(LeetCode)](https://leetcode-cn.com/problems/word-search/)
+
+## 题目简述
+
+给定一个`m x n`二维字符网格`board`和一个字符串单词`word`。如果`word`存在于网格中，返回`true`；否则，返回`false`。
+
+单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中“相邻”单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。
+
+
+## 参考题解
+
+### DFS+剪枝
+
+[题解详情-力扣(LeetCode)](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/solution/mian-shi-ti-12-ju-zhen-zhong-de-lu-jing-shen-du-yo/)
+
+:::: code-group
+::: code-group-item Java
+```java
+class Solution {
+    public boolean exist(char[][] board, String word) {
+        char[] words = word.toCharArray();
+        for(int i = 0; i < board.length; i++) {
+            for(int j = 0; j < board[0].length; j++) {
+                if(dfs(board, words, i, j, 0)) return true;
+            }
+        }
+        return false;
+    }
+    boolean dfs(char[][] board, char[] word, int i, int j, int k) {
+        if(i >= board.length || i < 0 || j >= board[0].length || j < 0 || board[i][j] != word[k]) return false;
+        if(k == word.length - 1) return true;
+        board[i][j] = '\0';
+        boolean res = dfs(board, word, i + 1, j, k + 1) || dfs(board, word, i - 1, j, k + 1) || 
+                      dfs(board, word, i, j + 1, k + 1) || dfs(board, word, i , j - 1, k + 1);
+        board[i][j] = word[k];
+        return res;
+    }
+}
+```
+:::
+::: code-group-item Python
+```python
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        def dfs(i, j, k):
+            if not 0 <= i < len(board) or not 0 <= j < len(board[0]) or board[i][j] != word[k]: return False
+            if k == len(word) - 1: return True
+            board[i][j] = ''
+            res = dfs(i + 1, j, k + 1) or dfs(i - 1, j, k + 1) or dfs(i, j + 1, k + 1) or dfs(i, j - 1, k + 1)
+            board[i][j] = word[k]
+            return res
+
+        for i in range(len(board)):
+            for j in range(len(board[0])):
+                if dfs(i, j, 0): return True
+        return False
+```
+:::
+::: code-group-item C++
+```c++
+class Solution {
+public:
+    bool exist(vector<vector<char>>& board, string word) {
+        rows = board.size();
+        cols = board[0].size();
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                if(dfs(board, word, i, j, 0)) return true;
+            }
+        }
+        return false;
+    }
+private:
+    int rows, cols;
+    bool dfs(vector<vector<char>>& board, string word, int i, int j, int k) {
+        if(i >= rows || i < 0 || j >= cols || j < 0 || board[i][j] != word[k]) return false;
+        if(k == word.size() - 1) return true;
+        board[i][j] = '\0';
+        bool res = dfs(board, word, i + 1, j, k + 1) || dfs(board, word, i - 1, j, k + 1) || 
+                      dfs(board, word, i, j + 1, k + 1) || dfs(board, word, i , j - 1, k + 1);
+        board[i][j] = word[k];
+        return res;
+    }
+};
+```
+:::
+::::
