@@ -1,1 +1,0 @@
-const t={key:"v-3a930831",path:"/docs/javascript.html",title:"JavaScript",lang:"zh-cmn-Hans",frontmatter:{title:"JavaScript"},excerpt:"",headers:[{level:2,title:"\u624B\u5199Array.prototype.reduce",slug:"\u624B\u5199array-prototype-reduce",children:[]}],git:{updatedTime:1646987001e3},readingTime:{minutes:1,words:133},filePathRelative:"docs/javascript.md"};export{t as data};
