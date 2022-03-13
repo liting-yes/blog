@@ -124,10 +124,10 @@ module.exports = {
 
 		themePlugins: {
 			giscus: {
-			repo: "JiangHuanLH/blog-comment",
-			repoId: "R_kgDOG_pSHw",
+			repo: "JiangHuanLH/blog",
+			repoId: "R_kgDOG_PX3g",
 			category: "Announcements",
-			categoryId: "DIC_kwDOG_pSH84COFDA",
+			categoryId: "DIC_kwDOG_PX3s4COFHh",
 			mapping: "pathname",
 			reactionsEnabled: true,
 			lang: "zh-CN",
