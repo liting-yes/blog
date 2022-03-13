@@ -1,0 +1,1 @@
+const t={key:"v-46f85a1c",path:"/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/",title:"Tags",lang:"zh-cmn-Hans",frontmatter:{title:"Tags",layout:"Tags"},excerpt:"",headers:[],git:{},filePathRelative:null};export{t as data};
