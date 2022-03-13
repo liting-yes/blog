@@ -9,10 +9,9 @@
     "vuepress-theme-gungnir": "^2.0.0-alpha.17"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vuepress dev docs --clean-cache",
+    "docs:build": "vuepress build docs --clean-cache"
   },
   "dependencies": {
-    "oh-vue-icons": "^1.0.0-rc2"
   }
 }
