@@ -1,5 +1,6 @@
 ---
 title: TypeScript
+date: 2022-03-13 
 ---
 
 # TypeScript

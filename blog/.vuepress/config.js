@@ -61,7 +61,7 @@ module.exports = {
 		docsDir: 'blog',
 		docsBranch: 'master',
 		navbar: navbar,
-		sidebar: false,
+		sidebar: sidebar,
 		hitokoto: true,
 		
 		personalInfo: {
@@ -120,6 +120,21 @@ module.exports = {
 			<br />
 			Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
 			<a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
-		`
+		`,
+
+		themePlugins: {
+			giscus: {
+			repo: "JiangHuanLH/blog-comment",
+			repoId: "R_kgDOG_pSHw",
+			category: "Announcements",
+			categoryId: "DIC_kwDOG_pSH84COFDA",
+			mapping: "pathname",
+			reactionsEnabled: true,
+			lang: "zh-CN",
+			crossorigin: "anonymous",
+			theme: "light",
+			darkTheme: "dark_dimmed"
+			}
+		}
 	}
 }

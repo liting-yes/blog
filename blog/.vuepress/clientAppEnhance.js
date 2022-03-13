@@ -3,9 +3,7 @@ import { addIcons } from "oh-vue-icons"
 
 import {
   FaFortAwesome,
-  FaSatelliteDish,
   FaTag,
-  RiArchiveDrawerLine,
   HiDocumentText,
   BiSearch
 } from "oh-vue-icons/icons"
@@ -13,8 +11,6 @@ import {
 addIcons(
   FaFortAwesome,
   FaTag,
-  FaSatelliteDish,
-  RiArchiveDrawerLine,
   HiDocumentText,
   BiSearch
 )

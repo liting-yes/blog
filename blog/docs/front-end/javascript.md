@@ -1,5 +1,6 @@
 ---
 title: JavaScript
+date: 2022-03-13 
 ---
 
 ## 手写Array.prototype.reduce

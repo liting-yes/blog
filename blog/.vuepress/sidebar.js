@@ -1,11 +1,12 @@
 module.exports = {
     "/docs/": [
         {
-            text: "文档",
+            text: "前端",
             children: [
-                "/docs/jacascript.md",
-                "/docs/typescript.md",
-                "/docs/css.md",
+                "/docs/front-end/info.md",
+                "/docs/front-end/javascript.md",
+                "/docs/front-end/typescript.md",
+                "/docs/front-end/css.md",
             ]
         }
     ]
