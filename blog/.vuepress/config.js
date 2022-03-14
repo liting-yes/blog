@@ -9,18 +9,18 @@ module.exports = {
 			"link",
 			{
 				rel: "icon",
-				type: "image/png",
+				type: "image/x-ico",
 				sizes: "16x16",
-				href: `/img/logo/favicon-16x16.png`
+				href: `/img/logo/favicon-16x16.ico`
 			}
 		],
 		[
 			"link",
 			{
 				rel: "icon",
-				type: "image/png",
+				type: "image/x-ico",
 				sizes: "32x32",
-				href: `/img/logo/favicon-32x32.png`
+				href: `/img/logo/favicon-32x32.ico`
 			}
 		],
 		["link", { rel: "manifest", href: "/manifest.webmanifest" }],
