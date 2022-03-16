@@ -62,6 +62,7 @@ module.exports = {
 		docsBranch: 'master',
 		navbar: navbar,
 		sidebar: sidebar,
+		sidebarDepth: 3,
 		hitokoto: true,
 		
 		personalInfo: {
@@ -94,9 +95,16 @@ module.exports = {
 		],
 		pages: {
 			tags: {
-				subtitle: '标签页',
+				subtitle: '将焕博客大合集',
 				bgImage: {
 					path: '/img/pages/tags.jpg',
+					mask: 'rbg(211, 136, 37, .5)'
+				}
+			},
+			links: {
+				subtitle: '将焕点开都说好的链接',
+				bgImage: {
+					path: '/img/pages/links.jpg',
 					mask: 'rbg(211, 136, 37, .5)'
 				}
 			}

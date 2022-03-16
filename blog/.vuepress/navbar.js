@@ -7,13 +7,18 @@ module.exports = {
 		},
 		{
 			text: "文档",
-			link: "/docs/front-end/info.md",
+			link: "/docs/front-end/javascript.md",
 			icon: "hi-document-text"
 		},
 		{
 			text: "标签",
 			link: "/tags/",
 			icon: "fa-tag"
+		},
+		{
+			text: '链接',
+			link: "/links/",
+			icon: "hi-link"
 		}
 	]
 }

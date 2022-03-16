@@ -3,8 +3,6 @@ title: TypeScript
 date: 2022-03-13 
 ---
 
-# TypeScript
-
 ## `interface`与`type`的异同
 
 ### 相同点

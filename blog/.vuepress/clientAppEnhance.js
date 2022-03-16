@@ -5,14 +5,16 @@ import {
   FaFortAwesome,
   FaTag,
   HiDocumentText,
-  BiSearch
+  BiSearch,
+  HiLink
 } from "oh-vue-icons/icons"
 
 addIcons(
   FaFortAwesome,
   FaTag,
   HiDocumentText,
-  BiSearch
+  BiSearch,
+  HiLink 
 )
 
 export default defineClientAppEnhance(({ app, router, siteData }) => { })

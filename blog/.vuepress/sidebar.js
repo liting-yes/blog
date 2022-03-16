@@ -1,12 +1,21 @@
 module.exports = {
-    "/docs/": [
+    sidebar: [
         {
-            text: "前端",
+            text: '前端',
+            link: '/docs/',
             children: [
-                "/docs/front-end/info.md",
-                "/docs/front-end/javascript.md",
-                "/docs/front-end/typescript.md",
-                "/docs/front-end/css.md",
+                {
+                    text: 'JavaScript',
+                    link: "/docs/front-end/javascript.md"
+                },
+                {
+                    text: 'TypeScript',
+                    link: "/docs/front-end/typescript.md"
+                },
+                {
+                    text: 'CSS',
+                    link: "/docs/front-end/css.md"
+                }
             ]
         }
     ]
