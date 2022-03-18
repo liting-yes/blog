@@ -120,16 +120,16 @@ export default defineUserConfig<GungnirThemeOptions>({
 
 		themePlugins: {
 			giscus: {
-			repo: "JiangHuanLH/blog",
-			repoId: "R_kgDOG_PX3g",
-			category: "Announcements",
-			categoryId: "DIC_kwDOG_PX3s4COFHh",
-			mapping: "pathname",
-			reactionsEnabled: true,
-			lang: "zh-CN",
-			crossorigin: "anonymous",
-			theme: "light",
-			darkTheme: "dark_dimmed"
+				repo: "JiangHuanLH/blog",
+				repoId: "R_kgDOHBcNIw",
+				category: "Announcements",
+				categoryId: "DIC_kwDOHBcNI84COKFf",
+				mapping: "pathname",
+				reactionsEnabled: true,
+				lang: "zh-CN",
+				crossorigin: "anonymous",
+				theme: "light",
+				darkTheme: "dark_dimmed"
 			}
 		}
 	}
