@@ -40,8 +40,9 @@ export default defineUserConfig<GungnirThemeOptions>({
 		{ rel: "apple-touch-icon", href: `/img/logo/apple-touch-icon.png` }
 		],
 		["meta", { name: "theme-color", content: "#377bb5" }],
-		["meta", { name: "msapplication-TileColor", content: "#377bb5" }]
-		],
+		["meta", { name: "msapplication-TileColor", content: "#377bb5" }],
+		["script", {src: "//cdn.jsdelivr.net/npm/@waline/client"}]
+	],
 
 	markdown: {
 		extractHeaders: {
@@ -114,20 +115,19 @@ export default defineUserConfig<GungnirThemeOptions>({
 			Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
 			<a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
 		`,
+	},
 
-		themePlugins: {
-			giscus: {
-				repo: "JiangHuanLH/blog",
-				repoId: "R_kgDOHBcNIw",
-				category: "Announcements",
-				categoryId: "DIC_kwDOHBcNI84COKFf",
-				mapping: "pathname",
-				reactionsEnabled: true,
-				lang: "zh-CN",
-				crossorigin: "anonymous",
-				theme: "light",
-				darkTheme: "dark_dimmed"
-			}
-		}
-	}
+	plugins: [
+		['vuepress-plugin-waline', {
+			serverURL: 'https://blog-comment-rho-henna.vercel.app/',
+			visitor: true,
+			emoji: [
+				'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
+				'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili'
+			],
+			dark: 'auto',
+			requiredMeta: ['nick'],
+			wordLimit: 1000
+		}]
+	]
 }) 

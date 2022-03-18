@@ -9,7 +9,7 @@ export const navbar: NavbarConfig =  [
 	{
 		text: "文档",
 		link: "/docs/interview/README.md",
-		icon: "hi-document-text"
+		icon: "fa-book"
 	},
 	{
 		text: "标签",
@@ -19,6 +19,6 @@ export const navbar: NavbarConfig =  [
 	{
 		text: '链接',
 		link: "/links/",
-		icon: "hi-link"
+		icon: "fa-link"
 	}
 ]

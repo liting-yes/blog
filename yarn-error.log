@@ -1,8 +1,8 @@
 Arguments: 
-  D:\development\nodejs\node.exe C:\Users\matebook\.yarn\releases\yarn-1.22.17.cjs add vite -D
+  D:\development\nodejs\node.exe C:\Users\matebook\.yarn\releases\yarn-1.22.17.cjs add -D vuepress-plugin-waline
 
 PATH: 
-  D:\software\python\Scripts\;D:\software\python\;D:\software\python2\;D:\software\python2\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;D:\mysql-8.0.23-winx64\bin;D:\software\Scripts\;D:\software\;C:\Users\matebook\AppData\Local\Microsoft\WindowsApps;C:\windows\system32D:\software\JAVA\bin;D:\software\JAVA\jre\bin;C:\Program Files\dotnet\;D:\.spss\JRE\bin;D:\software\Microsoft VS Code\bin;D:\program files\mingw64\bin;D:\software\java16\bin;C:\Program Files (x86)\dotnet\;D:\LLVM12\LLVM\bin;D:\program files\mingw64\include;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\bin;D:\development\nodejs\;D:\software\Xshell\;D:\software\Xftp\;D:\software\pandoc\;D:\software\Git\cmd;C:\Users\matebook\AppData\Roaming\npm;D:\development\nodejs\node_global;D:\development\nodejs\node_cache;D:\software\微信web开发者工具\dll;D:\sof;ware\python2\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;D:\software\PyCharm 2021.2.3\bin;C:\Users\matebook\.dotnet\tools;D:\software\PyCharm Community Edition 2020.3.2\bin;"D:\python\Tesseract-OCR;";D:\software\WebStorm 2021.2.2\bin;C:\Users\matebook\AppData\Local\GitHubDesktop\bin
+  D:\software\python\Scripts\;D:\software\python\;D:\software\python2\;D:\software\python2\Scripts;C:\Program Files\Common Files\Oracle\Java\javapath;D:\mysql-8.0.23-winx64\bin;D:\software\Scripts\;D:\software\;C:\Users\matebook\AppData\Local\Microsoft\WindowsApps;C:\windows\system32D:\software\JAVA\bin;D:\software\JAVA\jre\bin;C:\Program Files\dotnet\;D:\.spss\JRE\bin;D:\software\Microsoft VS Code\bin;D:\program files\mingw64\bin;D:\software\java16\bin;C:\Program Files (x86)\dotnet\;D:\LLVM12\LLVM\bin;D:\program files\mingw64\include;C:\windows\system32;C:\windows;C:\windows\system32\wbem;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\bin;D:\development\nodejs\;D:\software\Xshell\;D:\software\Xftp\;D:\software\pandoc\;D:\software\Git\cmd;C:\Users\matebook\AppData\Roaming\npm;D:\development\nodejs\node_global;D:\development\nodejs\node_cache;D:\software\微信web开发者工具\dll;D:\sof;ware\python2\;C:\Ruby30-x64\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;D:\software\PyCharm 2021.2.3\bin;C:\Users\matebook\.dotnet\tools;D:\software\PyCharm Community Edition 2020.3.2\bin;"D:\python\Tesseract-OCR;";D:\software\WebStorm 2021.2.2\bin;C:\Users\matebook\AppData\Local\GitHubDesktop\bin
 
 Yarn version: 
   1.22.17
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\桌面\blog\node_modules\vite\node_modules\esbuild-windows-64\esbuild.exe'
+  Error: EPERM: operation not permitted, unlink 'D:\桌面\blog\node_modules\esbuild-windows-64\esbuild.exe'
 
 npm manifest: 
   {

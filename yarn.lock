@@ -1487,6 +1487,11 @@
   dependencies:
     vue-demi "*"
 
+"@waline/client@^1.3.10":
+  version "1.6.0"
+  resolved "https://registry.npmmirror.com/@waline/client/-/client-1.6.0.tgz#4de2c6262c4cb8a8554308dd3844c42a17a8d7f9"
+  integrity sha512-nVjNh4l0GiO1D//aJj/6N6oCgFikhRqs4Juc9sbT2g9w+FxeEYosOc5PMlyDvp8JXGGla8uFuzhD8em5o7QZ3g==
+
 acorn@^8.5.0:
   version "8.7.0"
   resolved "https://registry.npmmirror.com/acorn/-/acorn-8.7.0.tgz#90951fde0f8f09df93549481e5fc141445b791cf"
@@ -4157,6 +4162,14 @@ vuepress-plugin-giscus@2.0.0-alpha.16:
   dependencies:
     "@vuepress/client" "2.0.0-beta.35"
 
+vuepress-plugin-waline@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.npmmirror.com/vuepress-plugin-waline/-/vuepress-plugin-waline-0.1.6.tgz#e1807ff04551b9f24bd80ff35da3f22ae5cacfe1"
+  integrity sha512-hlQPMqhgc7CssZxqy2VEJVWW+KkR10+sGcCjXpuKgx2baCnuJwYpuR/geQeMnpdGmSi9LHsqfV7Q/vOy1Qf4rw==
+  dependencies:
+    "@waline/client" "^1.3.10"
+    vuepress-vite "^2.0.0-beta.27"
+
 vuepress-theme-gungnir@^2.0.0-alpha.17:
   version "2.0.0-alpha.17"
   resolved "https://registry.npmmirror.com/vuepress-theme-gungnir/-/vuepress-theme-gungnir-2.0.0-alpha.17.tgz#2accc9ff055916e5df38d3087a999a1c12c388a8"
@@ -4194,7 +4207,7 @@ vuepress-theme-gungnir@^2.0.0-alpha.17:
     vuepress-plugin-code-enhance "2.0.0-alpha.10"
     vuepress-plugin-giscus "2.0.0-alpha.16"
 
-vuepress-vite@2.0.0-beta.36:
+vuepress-vite@2.0.0-beta.36, vuepress-vite@^2.0.0-beta.27:
   version "2.0.0-beta.36"
   resolved "https://registry.npmmirror.com/vuepress-vite/-/vuepress-vite-2.0.0-beta.36.tgz#50e4e2c11ff4e057f725ba42de81d9ac50be4b45"
   integrity sha512-KbN7HDhaCLVB7/YmJDydQClUjMBybLtBpB376mi5fD16RFBzHwMGI7zopb4lu7Nmj2BnvLI9kpottv9zuOJYLQ==

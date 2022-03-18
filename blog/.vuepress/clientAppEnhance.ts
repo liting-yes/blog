@@ -4,17 +4,17 @@ import { addIcons } from "oh-vue-icons"
 import {
   FaFortAwesome,
   FaTag,
-  HiDocumentText,
+  FaBook,
   BiSearch,
-  HiLink
+  FaLink
 } from "oh-vue-icons/icons"
 
 addIcons(
   FaFortAwesome,
   FaTag,
-  HiDocumentText,
+  FaBook,
   BiSearch,
-  HiLink 
+  FaLink
 )
 
 export default defineClientAppEnhance(({ app, router, siteData }) => { })
