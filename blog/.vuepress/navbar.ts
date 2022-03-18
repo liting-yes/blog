@@ -8,7 +8,7 @@ export const navbar: NavbarConfig =  [
 	},
 	{
 		text: "文档",
-		link: "/docs/front-end/javascript.md",
+		link: "/docs/interview/README.md",
 		icon: "hi-document-text"
 	},
 	{

@@ -5,6 +5,9 @@ import { sidebar } from "./sidebar"
 
 export default defineUserConfig<GungnirThemeOptions>({
 	base: '/',
+	lang: 'zh-cmn-Hans',
+	title: '将焕',
+	description: '将焕的个人博客',
 
 	head: [
 		[
@@ -39,13 +42,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 		["meta", { name: "theme-color", content: "#377bb5" }],
 		["meta", { name: "msapplication-TileColor", content: "#377bb5" }]
 		],
-	locales: {
-			"/": {
-				lang: 'zh-cmn-Hans',
-				title: '将焕',
-				description: '将焕的个人博客'
-			}
-	},
+
 	markdown: {
 		extractHeaders: {
 			level: [2, 3, 4, 5]
