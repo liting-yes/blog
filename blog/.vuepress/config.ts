@@ -4,7 +4,7 @@ import { navbar } from "./navbar"
 import { sidebar } from "./sidebar"
 
 export default defineUserConfig<GungnirThemeOptions>({
-	base: '/blog/',
+	base: '/',
 
 	head: [
 		[
