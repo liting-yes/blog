@@ -1,6 +1,7 @@
 ---
 title: JavaScript
-date: 2022-03-13 
+date: 2022-03-13
+sidebar: auto
 ---
 
 ## 手写Array.prototype.reduce

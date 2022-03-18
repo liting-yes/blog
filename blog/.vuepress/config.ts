@@ -1,7 +1,9 @@
-const { navbar } = require('./navbar.js')
-const { sidebar } = require('./sidebar.js')
+import { defineUserConfig } from "vuepress"
+import type { GungnirThemeOptions } from "vuepress-theme-gungnir"
+import { navbar } from "./navbar"
+import { sidebar } from "./sidebar"
 
-module.exports = {
+export default defineUserConfig<GungnirThemeOptions>({
 	base: '/blog/',
 
 	head: [
@@ -53,17 +55,17 @@ module.exports = {
 		}
 	},
 
-	bundler: "@vuepress/vite",
+	bundler: process.env.DOCS_BUNDLER ?? "@vuepress/vite",
 
 	theme: 'gungnir',
 	themeConfig: {
-		repo: 'https://gitee.com/jiang-huan-web/blog.git',
+		repo: 'https://github.com/JiangHuanLH/blog-dcos.git',
 		docsDir: 'blog',
 		docsBranch: 'master',
 		navbar: navbar,
 		sidebar: sidebar,
-		sidebarDepth: 3,
 		hitokoto: true,
+		search: false,
 		
 		personalInfo: {
 			name: '将焕',
@@ -72,7 +74,6 @@ module.exports = {
 			sns: {
 				github: 'JiangHuanLH',
 				zhihu: 'liu-mou-mou-94-79',
-				email: '',
 			}
 		},
 		homeHeaderImages: [
@@ -110,19 +111,6 @@ module.exports = {
 			}
 		},
 
-		search: {
-			locales: {
-				"/": {
-					placeholder: "搜索"
-				}
-			},
-			icon: "bi-search",
-			hotKeys: [],
-			maxSuggestion: 10,
-			isSearchable: () => true,
-			getExtraFields: (page) => (page) => page.frontmatter.tags ?? []
-		},
-
 		footer: `
 			<span>我在某年某月某日醒过来</span>
 			<br />
@@ -145,4 +133,4 @@ module.exports = {
 			}
 		}
 	}
-}
+}) 

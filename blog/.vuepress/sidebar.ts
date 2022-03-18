@@ -1,8 +1,9 @@
-module.exports = {
-    sidebar: [
+import type { SidebarConfig } from "vuepress-theme-gungnir"
+
+export const sidebar: SidebarConfig = {
+    "/docs/": [
         {
             text: '前端',
-            link: '/docs/',
             children: [
                 {
                     text: 'JavaScript',
