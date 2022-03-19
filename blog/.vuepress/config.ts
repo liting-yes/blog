@@ -62,6 +62,8 @@ export default defineUserConfig<GungnirThemeOptions>({
 		docsBranch: 'master',
 		navbar: navbar,
 		sidebar: sidebar,
+		sidebarDepth: 1,
+		lastUpdated: true,
 		hitokoto: true,
 		search: false,
 		
@@ -118,16 +120,36 @@ export default defineUserConfig<GungnirThemeOptions>({
 	},
 
 	plugins: [
-		['vuepress-plugin-waline', {
-			serverURL: 'https://blog-comment-rho-henna.vercel.app/',
-			visitor: true,
-			emoji: [
-				'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
-				'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili'
-			],
-			dark: 'auto',
-			requiredMeta: ['nick'],
-			wordLimit: 1000
-		}]
+		[
+			'vuepress-plugin-waline',
+			{
+				serverURL: 'https://blog-comment-rho-henna.vercel.app/',
+				visitor: true,
+				emoji: [
+					'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
+					'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili'
+				],
+				dark: 'auto',
+				requiredMeta: ['nick'],
+				wordLimit: 1000
+			}
+		],
+		[
+			"@renovamen/vuepress-plugin-rss",
+			{
+				siteURL: "https://blog-jianghuanlh.vercel.app/",
+				title: "将焕的博客空间",
+				description: "",
+				copyright: "JiangHuanLH",
+				count: 20,
+				filter: (page) => true
+			}
+		],
+		[
+			"@renovamen/vuepress-plugin-baidu-tongji",
+			{
+			  "id": "719d2dd48e85fa622a25499e7d0f2324"
+			}
+		]
 	]
 }) 

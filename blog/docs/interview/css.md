@@ -34,11 +34,28 @@ date: 2022-03-13
 - `paint`
 表示这个元素的子孙节点不会在它边缘外显示。如果一个元素在视窗外或因其他原因导致不可见，则同样保证它的子孙节点不会被显示。
 
-## 问答
-### 元素实现居中的方式
+### `text-tranform`
 
-#### HTML布局
+`text-transform`属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作
 
+#### 属性值
+
+- `capitalize`
+强制每个单词的首字母转换为大写，其他的字符保留不变（它们写在元素里的文本保留原始大小写）。字母是`Unicode`字符集或者数字里定义的字符，因此单词开头的任何标点符号或者特殊符号将会被忽略。
+
+- `uppercase`
+强制所有字符被转换为大写
+
+- `lowercase`
+强制所有字符被转换为小写
+
+- `none`
+阻止所有字符的大小写被转换
+
+
+## 元素实现居中的方式
+
+> HTML布局
 ```html
 <!DOCTYPE html>
 <html>
@@ -55,9 +72,7 @@ date: 2022-03-13
 </html>
 ```
 
-#### 实现方法
-
-##### absolute + transform
+### absolute + transform
 
 ```css
 * {
@@ -85,7 +100,7 @@ date: 2022-03-13
 }
 ```
 
-##### absolute + margin auto
+### absolute + margin auto
 
 ```css
 * {
@@ -115,7 +130,7 @@ date: 2022-03-13
 }
 ```
 
-##### flex
+### flex
 ```css
 * {
   margin : 0;
@@ -139,7 +154,7 @@ date: 2022-03-13
 }
 ```
 
-##### flex + margin auto
+### flex + margin auto
 ```css
 * {
   margin : 0;
@@ -163,7 +178,7 @@ date: 2022-03-13
 }
 ```
 
-##### table-cell
+### table-cell
 
 ```css
 * {
@@ -190,7 +205,7 @@ date: 2022-03-13
 }
 ```
 
-##### grid
+### grid
 ```css
 * {
   margin : 0;
@@ -214,3 +229,50 @@ date: 2022-03-13
   justify-self: center;
 }
 ```
+
+## 清除浮动/解决盒子塌陷的方案
+
+> 盒子塌陷：当所有的子元素浮动且父元素没有设置高度，这时候父元素就会产生高度塌陷，所有子元素都跑到了父元素外部
+
+### 直接写死父元素宽高
+
+- 优点：简单快速，兼容性好，适合只改动少量内容不涉及盒子排布的版面
+- 缺点：无法进行响应式布局，浏览器的窗口大小直接影响用户体验
+
+### 给父元素添加`border`
+
+### 给父元素添加`padding-top`
+
+### 给父元素添加`overflow`属性
+
+- `overflow: auto` 有可能出现滚动条，影响美观
+- `voerflow: hidden`  可能会带来内容不可见的问题
+
+### 给父元素添加浮动
+
+- 优点：简单方便
+- 缺点：对页面的布局不友好，不易维护
+
+### 父元素里最下方引入清除浮动块
+
+如：`<br style="clear:both;>`
+
+- 缺点：引入不必要的冗余元素，不推荐
+
+### 用`after`伪元素清除浮动
+
+```css
+/* .clearfix 为塌陷盒子 */
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
+```
+
+## 参考资料
+
+- [MDN](https://developer.mozilla.org/zh-CN/)
+- [牛客前端面试宝典](https://www.nowcoder.com/tutorial/96/f5212664ab664984882b00635066ded2)

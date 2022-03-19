@@ -4,3 +4,4 @@ Vuepress + Gungnir + waline
 
 ## 插件
 - vuepress-plugin-waline
+- @vuepress/plugin-docsearch@next
