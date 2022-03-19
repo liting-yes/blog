@@ -13,6 +13,7 @@
     "build": "vuepress build blog --clean-cache"
   },
   "dependencies": {
+    "vuepress-plugin-player": "^1.1.8",
     "vuepress-theme-gungnir": "^2.0.0-alpha.17"
   }
 }

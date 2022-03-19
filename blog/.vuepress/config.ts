@@ -14,19 +14,19 @@ export default defineUserConfig<GungnirThemeOptions>({
 			"link",
 			{
 				rel: "icon",
-				type: "image/x-ico",
+				type: "image/png",
 				sizes: "16x16",
-				href: `/img/logo/favicon-16x16.ico`
-			}
+				href: `/img/logo/favicon.png`
+			},
 		],
 		[
 			"link",
 			{
 				rel: "icon",
-				type: "image/x-ico",
+				type: "image/png",
 				sizes: "32x32",
-				href: `/img/logo/favicon-32x32.ico`
-			}
+				href: `/img/logo/favicon.png`
+			},
 		],
 		["link", { rel: "manifest", href: "/manifest.webmanifest" }],
 		["meta", { name: "application-name", content: "JiangHuan's Personal Blog" }],
@@ -150,6 +150,42 @@ export default defineUserConfig<GungnirThemeOptions>({
 			{
 			  "id": "719d2dd48e85fa622a25499e7d0f2324"
 			}
-		]
+		],
+		[
+            'vuepress-plugin-player',
+            {
+				disableSpace: false,
+				songIds: ['29723011','1887893189','1421069053'],
+                playlist: '7082462754',
+                showPlaylist: false,
+                disabledNetEaseMusic: true,
+				serverUrl: 'https://netease-cloud-music-api-teal-psi.vercel.app/',
+                localSongs: {
+                    coverUrl: '/img/avatar.jpeg',
+                    songs: [
+                        {
+                            path: '/song/1.mp3',
+                            songName: '一直很安静',
+							cover: '/img/avatar.jpeg'
+                        },
+                        {
+                            path: '/song/2.mp3',
+                            songName: '小幸运',
+							cover: '/img/avatar.jpeg'
+                        },
+                        {
+                            path: '/song/3.mp3',
+                            songName: '牧马城市',
+							cover: '/img/avatar.jpeg'
+                        },
+						{
+                            path: '/song/4.mp3',
+                            songName: '牵丝戏',
+							cover: '/img/avatar.jpeg'
+                        }
+                    ]
+                }
+            }
+        ]
 	]
 }) 
