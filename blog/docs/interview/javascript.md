@@ -217,6 +217,138 @@ function resolvePromise(promise, x, resolve, reject) {
         resolve(x);
     }
 }
+```
 
-module.exports = MyPromise
+## 手写 Promise.all
+
+> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-3)
+
+```js
+function PromiseAll (promises) {
+    return new Promise((resolve, reject) => {
+        // 只考虑到 promises 为数组的情况，实际上 promises 可以为任何 es6 的 iterable 类型
+        if (!Array.isArray(promises))
+            throw new TypeError('promises must be an array')
+        
+        let result = []
+        let count = 0
+        promises.forEach((promise, index) => {
+            // 只考虑到 promise 为 Promise 实例
+            promise.then(
+                (res) => {
+                    result[index] = res
+                    count++
+                    count === promises.length && resolve(result)
+                },
+                (err) => {
+                    reject(err)
+                }
+            )
+        })
+    })
+}
+```
+
+## 手写 Promise.finally
+
+> 参考 [掘金](https://juejin.cn/post/6844904178897125389#heading-3)
+
+```js
+Promise.prototype.finally = function (cb) {
+    return this.then(
+        (value) => {
+            return Promise.resolve(cb()).then(() => value)
+        },
+        (reason) => {
+            return Promise.resolve(cb()).then(() => { throw reason })
+        }
+    )
+}
+```
+
+## 手写 Promise.allSettled
+
+> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-5)
+
+```js
+function allSettled (promises) {
+    if (promises.length === 0)
+        return Promise.resolve([])
+    
+    const promises_ = promises.map(
+        item => item instanceof Promise ? item : Promise.resolve(item)
+    )
+
+    return new Promise((resolve, reject) => {
+        const result = []
+        let unSettled = promises_.length
+
+        promises_.forEach((promise, index) => {
+            promise.then(
+                (value) => {
+                    result[index] = {
+                        status: 'fulfilled',
+                        value
+                    }
+
+                    if (--unSettled === 0)
+                        resolve(result)
+                },
+                (reason) => {
+                    result[index] = {
+                        status: 'rejected',
+                        reason
+                    }
+
+                    if (--unSettled === 0)
+                        resolve(result)
+                }
+            )
+        })
+    })
+}
+```
+
+## 手写 Promise.race
+
+> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-6)
+
+```js
+Promise.race = function (promises) {
+    return new Promise((resolve, reject) => {
+        promises.forEach(
+            p => {
+                Promise.resolve(p).then(
+                    value => resolve(value),
+                    reason => reject(reason)
+                )
+            }
+        )
+    })
+}
+```
+
+## 手写 Promise.any
+
+- 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-8)
+
+```js
+Promise.any = function (promises) {
+    let index = 0
+
+    return new Promise((resolve, reject) => {
+        if (promises.length === 0)  return
+
+        promises.forEach((p, i) => {
+            Promise.resolve(p).then(
+                value => resolve(value),
+                () => {
+                    index++
+                    if (index === promises.length)
+                        reject(new AggregateError('All promises were rejected'))
+                }
+            )
+        })
+    })
+}
 ```
