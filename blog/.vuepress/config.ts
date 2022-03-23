@@ -57,9 +57,10 @@ export default defineUserConfig<GungnirThemeOptions>({
 
 	theme: 'gungnir',
 	themeConfig: {
-		repo: 'https://github.com/JiangHuanLH/blog-dcos.git',
+		repo: 'https://github.com/JiangHuanLH/blog',
 		docsDir: 'blog',
 		docsBranch: 'master',
+		editLinkPattern: ':repo/edit/:branch/:path',
 		navbar: navbar,
 		sidebar: sidebar,
 		sidebarDepth: 1,
