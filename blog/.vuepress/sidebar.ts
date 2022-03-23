@@ -10,6 +10,13 @@ export const sidebar: SidebarConfig = {
                 "/docs/interview/typescript.md",
                 "/docs/interview/css.md"
             ]
+        },
+        {
+            text: '你不知道的JavaScript',
+            link: "/docs/你不知道的JavaScript/README.md",
+            children: [
+                "/docs/你不知道的JavaScript/作用域和闭包.md"
+            ]
         }
     ]
 }

@@ -76,6 +76,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 				zhihu: 'liu-mou-mou-94-79',
 			}
 		},
+
 		homeHeaderImages: [
 			{
 				"path": '/img/home-bg/1.jpg',
@@ -94,6 +95,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 				"mask": 'rgb(40, 57, 101, .4)'
 			}
 		],
+
 		pages: {
 			tags: {
 				subtitle: '将焕博客大合集',
@@ -116,7 +118,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 			<br />
 			Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
 			<a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
-		`,
+		`
 	},
 
 	plugins: [

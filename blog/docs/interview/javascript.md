@@ -3,6 +3,21 @@ title: JavaScript
 date: 2022-03-13
 ---
 
+## 手写 String.raw()
+
+> 参考 [阮一峰-es6入门教程](https://es6.ruanyifeng.com/#docs/string-methods)
+
+```js
+String.raw = function (strings, ...values) {
+    let optput = ''
+    let index
+    for (index = 0; index < values.length; index++)
+        output += strings.raw[index] + values[index]
+    output += strings.raw[index]
+    return output
+}
+```
+
 ## 手写 Array.prototype.reduce
 
 > 参考 [MDN-Array.prototype.reduce-Polyfill](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#polyfill)
@@ -49,6 +64,12 @@ if (!Array.prototype.reduce) {
   });
 }
 ```
+
+## 手写 Generator
+
+> 参考 [掘金-手写generator核心原理，再也不怕面试官问我generator原理](https://juejin.cn/post/6859281096152973326)
+
+
 
 ## 手写 Promise
 
