@@ -73,6 +73,18 @@ date: 2022-03-13
 - `sapia()`
 将图像转换为深褐色，值为0%时图像无变化，值为100%时图像完全深褐色
 
+### `overflow-wrap`
+
+用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行
+
+#### 属性值
+
+- `normal`
+行只能在正常的单词断点处中断（例如两个单词之间的空格）
+
+- `break-word`
+表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行
+
 ### `text-tranform`
 
 `text-transform`属性指定如何将元素的文本大写。它可以用于使文本显示为全大写或全小写，也可单独对每一个单词进行操作
@@ -90,6 +102,59 @@ date: 2022-03-13
 
 - `none`
 阻止所有字符的大小写被转换
+
+### `vertical-align`
+指定行内元素或表格单元格元素的垂直对齐方式
+
+#### 属性值
+
+- `baseline`
+使元素的基线与父元素的基线对齐
+
+- `sub`
+使元素的基线与父元素的下标基线对齐
+
+- `super`
+使元素的基线与父元素的上标基线对齐
+
+- `text-top`
+使元素的顶部与父元素的字体顶部对齐
+
+- `text-bottom`
+使元素的底部与父元素的字体底部对齐
+
+- `middle`
+使元素的中部与父元素的基线加上父元素`x-height`的一半对齐
+
+- `$length`
+使元素的基线对齐到父元素的基线之上的给定长度
+
+- `$percentage`
+使元素的基线对齐到父元素的基线之上的给定百分比，该百分比是`line-height`的百分比，可以为负
+
+- `top`
+使元素及其后代元素的顶部与整行的顶部对齐
+
+- `bottom`
+使元素及其后代元素的底部与整行的底部对齐
+
+### `word-break`
+
+指定怎样在单词内断行
+
+#### 属性值
+
+- `normal`
+使用默认的断行规则
+
+- `break-all`
+对于non-CJK文本，可在任意字符断行
+
+- `keep-all`
+CJK文本不断行，non-CJK文本表现同`normal`
+
+- `break-all`
+相当于`word-break: noraml` + `overflow-wrap: break-word`
 
 
 ## 元素实现居中的方式
@@ -307,7 +372,18 @@ date: 2022-03-13
 
 ```
 
-## 参考资料
+## 隐藏元素的方法
+
+- `display: none`
+- `visibility: hidden`
+- `opacity: 0`
+- `position: absolute` + 位移
+- `z-index: -999`
+- `clip/clip-path`
+- `transform: scale(0, 0)`
+
+## 主要参考资料
 
 - [MDN](https://developer.mozilla.org/zh-CN/)
 - [牛客前端面试宝典](https://www.nowcoder.com/tutorial/96/f5212664ab664984882b00635066ded2)
+- [掘金技术社区](https://juejin.cn/)
