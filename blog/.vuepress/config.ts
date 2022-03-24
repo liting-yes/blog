@@ -66,7 +66,15 @@ export default defineUserConfig<GungnirThemeOptions>({
 		sidebarDepth: 1,
 		lastUpdated: true,
 		hitokoto: true,
-		search: false,
+		searchText: '搜索博客',
+		searchIicon: 'fa-search',
+		search: {
+			locales: {
+				'/': {
+					placeholder: '搜索博客'
+				}
+			},
+		},
 		
 		personalInfo: {
 			name: '将焕',
@@ -119,7 +127,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 			<br />
 			Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
 			<a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
-		`
+		`,
 	},
 
 	plugins: [

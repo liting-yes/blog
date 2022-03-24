@@ -6,7 +6,8 @@ import {
   FaTag,
   FaBook,
   BiSearch,
-  FaLink
+  FaLink,
+  FaSearch
 } from "oh-vue-icons/icons"
 
 addIcons(
@@ -14,7 +15,8 @@ addIcons(
   FaTag,
   FaBook,
   BiSearch,
-  FaLink
+  FaLink,
+  FaSearch
 )
 
 export default defineClientAppEnhance(({ app, router, siteData }) => { })
