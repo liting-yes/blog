@@ -3,6 +3,18 @@ title: JavaScript
 date: 2022-03-13
 ---
 
+## 手写 new()
+> 参考 [掘金-重学 JS 系列：聊聊 new 操作符](https://juejin.cn/post/6844903789070123021)
+
+```js
+function create (Con, ...args) {
+    let obj = {}
+    Object.setPrototypeOf(obj, Con.prototype)
+    let result = Con.apply(obj, args)
+    return result instanceof Object ? result : obj
+}
+```
+
 ## 手写 String.raw()
 
 > 参考 [阮一峰-es6入门教程](https://es6.ruanyifeng.com/#docs/string-methods)
@@ -19,7 +31,6 @@ String.raw = function (strings, ...values) {
 ```
 
 ## 手写 Array.prototype.reduce
-
 > 参考 [MDN-Array.prototype.reduce-Polyfill](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#polyfill)
 
 ```js
@@ -62,6 +73,27 @@ if (!Array.prototype.reduce) {
       return value;
     }
   });
+}
+```
+## 手写 Object.setPropertyOf()
+> 参考 [MDN-Object.setProperty-polyfill](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf)
+
+```js
+function setPropertyOf (obj, proto) {
+    if (obj.__proto__) {
+        obj.__proto__ = proto
+        return obj
+    }   else {
+        let Fn = function () {
+            for (let key in obj) {
+                Object.defineProperty(this, key, {
+                    value: obj[key]
+                })
+            }
+        }
+        Fn.prototype = proto
+        return new Fn()
+    }
 }
 ```
 
