@@ -73,7 +73,7 @@ if (!Array.prototype.reduce) {
 
 ## 手写 Promise
 
-> 参考 [掘金](https://juejin.cn/post/6945319439772434469)
+> 参考 [掘金-从一道让我失眠的 Promise 面试题开始，深入分析 Promise 实现细节](https://juejin.cn/post/6945319439772434469)
 
 ```js
 // Promise 状态
@@ -242,7 +242,7 @@ function resolvePromise(promise, x, resolve, reject) {
 
 ## 手写 Promise.all
 
-> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-3)
+> 参考 [掘金-2021年前端各大公司都考了那些手写题(附带代码)](https://juejin.cn/post/7033275515880341512#heading-3)
 
 ```js
 function PromiseAll (promises) {
@@ -272,7 +272,7 @@ function PromiseAll (promises) {
 
 ## 手写 Promise.finally
 
-> 参考 [掘金](https://juejin.cn/post/6844904178897125389#heading-3)
+> 参考 [掘金-实现Promise的catch、finally、all、race方法](https://juejin.cn/post/6844904178897125389#heading-3)
 
 ```js
 Promise.prototype.finally = function (cb) {
@@ -289,7 +289,7 @@ Promise.prototype.finally = function (cb) {
 
 ## 手写 Promise.allSettled
 
-> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-5)
+> 参考 [掘金-2021年前端各大公司都考了那些手写题(附带代码)](https://juejin.cn/post/7033275515880341512#heading-5)
 
 ```js
 function allSettled (promises) {
@@ -332,7 +332,7 @@ function allSettled (promises) {
 
 ## 手写 Promise.race
 
-> 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-6)
+> 参考 [掘金-2021年前端各大公司都考了那些手写题(附带代码)](https://juejin.cn/post/7033275515880341512#heading-6)
 
 ```js
 Promise.race = function (promises) {
@@ -351,7 +351,7 @@ Promise.race = function (promises) {
 
 ## 手写 Promise.any
 
-- 参考 [掘金](https://juejin.cn/post/7033275515880341512#heading-8)
+- 参考 [掘金-2021年前端各大公司都考了那些手写题(附带代码)](https://juejin.cn/post/7033275515880341512#heading-8)
 
 ```js
 Promise.any = function (promises) {
