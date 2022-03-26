@@ -88,19 +88,19 @@ export default defineUserConfig<GungnirThemeOptions>({
 
 		homeHeaderImages: [
 			{
-				"path": '/img/home-bg/1.jpg',
+				"path": 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights8.jpg',
 				"mask": 'rgb(40, 57, 101, .4)'
 			},
 			{
-				"path": '/img/home-bg/2.jpg',
+				"path": 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/figure1.jpg',
 				"mask": 'rgb(40, 57, 101, .4)'
 			},
 			{
-				"path": '/img/home-bg/3.jpg',
+				"path": 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights6.jpg',
 				"mask": 'rgb(40, 57, 101, .4)'
 			},
 			{
-				"path": '/img/home-bg/4.jpg',
+				"path": 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights7.jpg',
 				"mask": 'rgb(40, 57, 101, .4)'
 			}
 		],
@@ -109,14 +109,14 @@ export default defineUserConfig<GungnirThemeOptions>({
 			tags: {
 				subtitle: '将焕博客大合集',
 				bgImage: {
-					path: '/img/pages/tags.jpg',
+					path: 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights4.jpg',
 					mask: 'rbg(211, 136, 37, .5)'
 				}
 			},
 			links: {
 				subtitle: '将焕点开都说好的链接',
 				bgImage: {
-					path: '/img/pages/links.jpg',
+					path: 'https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights13.png',
 					mask: 'rbg(211, 136, 37, .5)'
 				}
 			}
