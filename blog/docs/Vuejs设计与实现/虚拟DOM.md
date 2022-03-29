@@ -1,16 +1,6 @@
 ---
-layout: Post
 title: 虚拟DOM
-subtitle: 《Vue.js设计与实现》读书笔记
-author: 将焕
 date: 2022-02-23
-useHeaderImage: true
-headerImage: https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/2537/sights5.jpg
-tags:
-  - 前端
-  - 读书笔记
-  - Vue.js
-  - 《Vue.js设计与实现》
 ---
 
 知我者谓我心忧，不知我者谓我何求

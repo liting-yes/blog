@@ -13,11 +13,40 @@ export const sidebar: SidebarConfig = {
             ]
         },
         {
-            text: '你不知道的JavaScript',
-            link: "/docs/你不知道的JavaScript/README.md",
+            text: '读书笔记',
+            link: '/docs/读书笔记/README.md',
             children: [
-                "/docs/你不知道的JavaScript/作用域和闭包.md"
+                {
+                    text: '你不知道的JavaScript',
+                    children: [
+                        '/docs/你不知道的JavaScript/作用域和闭包.md'
+                    ]
+                },
+                {
+                    text: 'Vue.js设计与实现',
+                    children: [
+                        '/docs/Vuejs设计与实现/命令式与声明式.md',
+                        '/docs/Vuejs设计与实现/虚拟DOM.md',
+                        '/docs/Vuejs设计与实现/运行时编译.md',
+                        '/docs/Vuejs设计与实现/框架设计的核心要素.md',
+                        '/docs/Vuejs设计与实现/组件的本质及相应的渲染实现.md',
+                        '/docs/Vuejs设计与实现/响应式数据的简单实现.md',
+                        '/docs/Vuejs设计与实现/不容易的数据响应实现.md',
+                        '/docs/Vuejs设计与实现/计算属性.md',
+                        '/docs/Vuejs设计与实现/watch侦听器.md'
+                    ]
+                }
             ]
         }
+        // {
+        //     text: '你不知道的JavaScript',
+        //     children: [
+        //         "/docs/你不知道的JavaScript/作用域和闭包.md"
+        //     ]
+        // },
+        // {
+        //     text: 'Vue.js设计与实现',
+        //     link: ''
+        // }
     ]
 }
