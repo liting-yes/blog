@@ -123,10 +123,7 @@ export default defineUserConfig<GungnirThemeOptions>({
 		},
 
 		footer: `
-			<span>我在某年某月某日醒过来</span>
-			<br />
-			Powered by <a href="https://v2.vuepress.vuejs.org" target="_blank">VuePress</a> &
-			<a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
+			<span>我在某年某月某日醒过来</span> & <a href="https://beian.miit.gov.cn/" target="_blank">湘ICP备2022005092号</a>
 		`,
 	},
 
