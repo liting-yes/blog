@@ -9,7 +9,8 @@ export const sidebar: SidebarConfig = {
                 "/docs/interview/javascript.md",
                 "/docs/interview/typescript.md",
                 "/docs/interview/css.md",
-                "/docs/interview/计算机网络.md"
+                "/docs/interview/计算机网络.md",
+                "/docs/interview/数据结构.md",
             ]
         },
         {
