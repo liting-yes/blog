@@ -346,6 +346,22 @@ CJK文本不断行，non-CJK文本表现同`normal`
 }
 ```
 
+## 什么时候外边距折叠
+
+- 同一层相邻元素（除非后一个元素清除浮动）
+- 没有内容将父元素和后代元素分开
+- 空的块级元素
+
+## 创建块格式化上下文的方式
+
+- `<html>`
+- `float: !node`
+- `position: absolute | fixed`
+- `display: inline-block | table-cell | table-caption | table | table-row | table-row-group | table-header-group | table-footer-group | flow-root | flex | inline-flex | grid | inline-grid`
+- `overflow: !visible`
+- `contain: layout | content | paint`
+- `column-count: !auto` || `column-width: !auto` || `column-span: all`
+
 ## 清除浮动/解决盒子塌陷的方案
 
 > 盒子塌陷：当所有的子元素浮动且父元素没有设置高度，这时候父元素就会产生高度塌陷，所有子元素都跑到了父元素外部
