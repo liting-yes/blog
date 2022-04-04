@@ -11,6 +11,7 @@ export const sidebar: SidebarConfig = {
                 "/docs/interview/css.md",
                 "/docs/interview/计算机网络.md",
                 "/docs/interview/数据结构.md",
+                "/docs/interview/算法思想.md",
             ]
         },
         {
@@ -39,15 +40,5 @@ export const sidebar: SidebarConfig = {
                 }
             ]
         }
-        // {
-        //     text: '你不知道的JavaScript',
-        //     children: [
-        //         "/docs/你不知道的JavaScript/作用域和闭包.md"
-        //     ]
-        // },
-        // {
-        //     text: 'Vue.js设计与实现',
-        //     link: ''
-        // }
     ]
 }
