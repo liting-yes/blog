@@ -21,7 +21,8 @@ export const sidebar: SidebarConfig = {
                 {
                     text: '你不知道的JavaScript',
                     children: [
-                        '/docs/你不知道的JavaScript/作用域和闭包.md'
+                        '/docs/你不知道的JavaScript/作用域和闭包.md',
+                        '/docs/你不知道的JavaScript/词法作用域.md',
                     ]
                 },
                 {
