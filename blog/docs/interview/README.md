@@ -5,7 +5,7 @@ date: 2022-03-18
 
 ## 面试之路
 
-还没有参加过面试呢
+- 2022年暑假实习记录-[飞书文档](https://ucxrp1rus6.feishu.cn/mindnotes/bmncnD5JTogs8pUPy6I0EFRIWEc#mindmap)
 
 ## 个人知识网络
 
